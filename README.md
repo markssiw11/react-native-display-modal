@@ -36,7 +36,7 @@
         headerCloseButton={false}
         // closeButtonMode="upper"
         closeButtonShow={true}
-        // subContext="sub conext you want display"
+        // subContext="sub context you want display"
         titleStyle={{color: 'red'}}
         button={[
           {
