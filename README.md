@@ -1,8 +1,7 @@
 # react-native-display-modal
 # Demo
 
-![image-demo](http://https://images.unsplash.com/photo-1593642532973-d31b6557fa68?ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60)
-
+![image demo](https://i.ibb.co/VBHmfT9/A-nh-chu-p-Ma-n-hi-nh-2021-08-01-lu-c-21-06-12.png)
 
 # 1. install
  - npm i react-native-display-modal
