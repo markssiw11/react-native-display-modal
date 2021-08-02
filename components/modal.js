@@ -28,9 +28,10 @@ const RenderModalBody = (props) => {
     iconViewTintColor,
     subContext,
     subContextStyle,
+    modalStyle,
   } = props;
   return (
-    <TouchableOpacity onPress={() => {}} style={styles.modalView}>
+    <TouchableOpacity onPress={() => {}} style={[styles.modalView, { ...modalStyle }]}>
       <View style={styles.bodyModal}>
         <RenderCloseView {...props} />
         <RenderIconView iconView={iconView} hiddenIconView={hiddenIconView} iconViewTintColor={iconViewTintColor} />

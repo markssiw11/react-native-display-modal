@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import { StyleProp, TextStyle } from "react-native";
+import { StyleProp, TextStyle, ViewStyle } from "react-native";
 
 export interface DisplayModalProps {
   isOpen: boolean,
@@ -10,6 +10,7 @@ export interface DisplayModalProps {
   titleStyle?: StyleProp<TextStyle>,
   contextStyle?: StyleProp<TextStyle>,
   subContextStyle?: StyleProp<TextStyle>,
+  modalStyle: StyleProp<ViewStyle>,
   iconView?: ReactNode,
   headerCloseButton? :boolean,
   closeButtonMode: 'upper' |  'right' | 'left',
