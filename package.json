@@ -1,14 +1,12 @@
 {
   "name": "react-native-display-modal",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": false,
   "homepage": "https://github.com/markssiw11/react-native-display-modal",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "react": "17.0.1",
-    "react-native": "0.64.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
@@ -18,7 +16,9 @@
     "eslint": "7.14.0",
     "jest": "^26.6.3",
     "metro-react-native-babel-preset": "^0.64.0",
-    "react-test-renderer": "17.0.1"
+    "react-test-renderer": "17.0.1",
+    "react": "> 15.0.0",
+    "react-native": "> 0.50.0"
   },
   "jest": {
     "preset": "react-native"
