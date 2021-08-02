@@ -1,11 +1,6 @@
 # react-native-display-modal
 # Demo
-
-![image demo](https://i.ibb.co/VBHmfT9/A-nh-chu-p-Ma-n-hi-nh-2021-08-01-lu-c-21-06-12.png)
-
-![image android](https://i.ibb.co/fXb8Gkq/A-nh-chu-p-Ma-n-hi-nh-2021-08-02-lu-c-08-26-14.png)
-
-![image android](https://i.ibb.co/Qf5c31m/A-nh-chu-p-Ma-n-hi-nh-2021-08-02-lu-c-08-35-41.png)
+<img src="https://i.ibb.co/VBHmfT9/A-nh-chu-p-Ma-n-hi-nh-2021-08-01-lu-c-21-06-12.png" width="250"><img src="https://i.ibb.co/fXb8Gkq/A-nh-chu-p-Ma-n-hi-nh-2021-08-02-lu-c-08-26-14.png" width="250"><img src="https://i.ibb.co/Qf5c31m/A-nh-chu-p-Ma-n-hi-nh-2021-08-02-lu-c-08-35-41.png" width="250">
 
 # 1. install
  - npm i react-native-display-modal
