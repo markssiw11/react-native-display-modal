@@ -1,13 +1,12 @@
 {
   "name": "react-native-display-modal",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": false,
   "homepage": "https://github.com/markssiw11/react-native-display-modal",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/runtime": "^7.12.5",

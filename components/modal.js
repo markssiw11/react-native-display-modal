@@ -1,16 +1,38 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Modal, Image } from 'react-native';
+import { View, Text, TouchableOpacity, Modal, Image, ActivityIndicator, TouchableWithoutFeedback } from 'react-native';
 import Button from './button';
 import { defaultCloseTintColor, defaultIconViewTintColor } from '../utils';
 import styles from '../utils/styles';
 function DisplayModal(props) {
-  const { isOpen, onCloseModal } = props;
+  const { isOpen, onCloseModal, type ="actions" } = props;
+  const ModalActionType = () => {
+    return (
+      <TouchableWithoutFeedback onPress={onCloseModal}>
+        <View  style={styles.centeredView}>
+          <RenderModalBody {...props} />
+        </View>
+    </TouchableWithoutFeedback>
+    )
+  }
+  const ModalLoadingType = () => {
+    return (
+      <View style={styles.loadingContainer} >
+        <ActivityIndicator size="large" color="white"  />
+      </View>
+    )
+  }
+  const RenderModalType = () => {
+    switch (type) {
+      case 'loading':
+        return <ModalLoadingType/>    
+      default:
+        return <ModalActionType/>
+    }
+  }
   return (
     <View style={[styles.modalContainer, isOpen && { backgroundColor: 'grey' }]}>
       <Modal animationType="slide" transparent={true} visible={isOpen} onRequestClose={onCloseModal}>
-        <TouchableOpacity style={styles.centeredView} onPress={onCloseModal}>
-          <RenderModalBody {...props} />
-        </TouchableOpacity>
+       <RenderModalType/>
       </Modal>
     </View>
   );

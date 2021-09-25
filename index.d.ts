@@ -19,7 +19,8 @@ export interface DisplayModalProps {
   closeIcon: ReactNode,
   hiddenIconView?: boolean,
   closeIconTintColor?: string,
-  iconViewTintColor?: string
+  iconViewTintColor?: string,
+  type: 'loading' | 'actions'
 }
 
 type ButtonProps = {
