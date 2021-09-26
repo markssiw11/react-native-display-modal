@@ -4,37 +4,35 @@ import Button from './button';
 import { defaultCloseTintColor, defaultIconViewTintColor } from '../utils';
 import styles from '../utils/styles';
 function DisplayModal(props) {
-  const { isOpen, onCloseModal, type ="actions" } = props;
+  const { isOpen, onCloseModal, type = 'actions' } = props;
   const ModalActionType = () => {
     return (
-      <TouchableWithoutFeedback onPress={onCloseModal}>
-        <View  style={styles.centeredView}>
+      <TouchableWithoutFeedback onPress={onCloseModal} style={styles.centeredView}>
+        <View style={styles.centeredView}>
           <RenderModalBody {...props} />
         </View>
-    </TouchableWithoutFeedback>
-    )
-  }
+      </TouchableWithoutFeedback>
+    );
+  };
   const ModalLoadingType = () => {
     return (
-      <View style={styles.loadingContainer} >
-        <ActivityIndicator size="large" color="white"  />
+      <View style={styles.loadingContainer}>
+        <ActivityIndicator size="large" color="white" />
       </View>
-    )
-  }
+    );
+  };
   const RenderModalType = () => {
     switch (type) {
       case 'loading':
-        return <ModalLoadingType/>    
+        return <ModalLoadingType />;
       default:
-        return <ModalActionType/>
+        return <ModalActionType />;
     }
-  }
+  };
   return (
-    <View style={[styles.modalContainer, isOpen && { backgroundColor: 'grey' }]}>
-      <Modal animationType="slide" transparent={true} visible={isOpen} onRequestClose={onCloseModal}>
-       <RenderModalType/>
-      </Modal>
-    </View>
+    <Modal animationType="none" transparent visible={isOpen} onRequestClose={onCloseModal}>
+      <RenderModalType />
+    </Modal>
   );
 }
 
@@ -53,20 +51,22 @@ const RenderModalBody = (props) => {
     modalStyle,
   } = props;
   return (
-    <TouchableOpacity onPress={() => {}} style={[styles.modalView, { ...modalStyle }]}>
-      <View style={styles.bodyModal}>
-        <RenderCloseView {...props} />
-        <RenderIconView iconView={iconView} hiddenIconView={hiddenIconView} iconViewTintColor={iconViewTintColor} />
-        <Text style={[styles.titleTxt, { ...titleStyle }]}>{title}</Text>
-        <Text style={[styles.contextTxt, { ...contextStyle }]}>{context}</Text>
-        <Text style={[styles.subContextTxt, { ...subContextStyle }]}>{subContext}</Text>
+    <TouchableWithoutFeedback>
+      <View style={[styles.modalView, { ...modalStyle }]}>
+        <View style={styles.bodyModal}>
+          <RenderCloseView {...props} />
+          <RenderIconView iconView={iconView} hiddenIconView={hiddenIconView} iconViewTintColor={iconViewTintColor} />
+          <Text style={[styles.titleTxt, { ...titleStyle }]}>{title}</Text>
+          <Text style={[styles.contextTxt, { ...contextStyle }]}>{context}</Text>
+          <Text style={[styles.subContextTxt, { ...subContextStyle }]}>{subContext}</Text>
+        </View>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+          {button.map(({ title, buttonStyle, textStyle, onPress }, i) => (
+            <Button key={i} title={title} buttonStyle={buttonStyle} textStyle={textStyle} onPress={onPress} />
+          ))}
+        </View>
       </View>
-      <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-        {button.map(({ title, buttonStyle, textStyle, onPress }, i) => (
-          <Button key={i} title={title} buttonStyle={buttonStyle} textStyle={textStyle} onPress={onPress} />
-        ))}
-      </View>
-    </TouchableOpacity>
+    </TouchableWithoutFeedback>
   );
 };
 

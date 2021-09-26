@@ -12,16 +12,19 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: 'rgba(52, 52, 52, 0.3)',
   },
   bodyModal: {
     marginVertical: 20,
+    backgroundColor: 'white',
+    opacity: 1
   },
   modalView: {
     backgroundColor: defaultCloseTintColor,
     paddingHorizontal: 20,
     borderRadius: 20,
-    minWidth: width - 140,
-    maxWidth: width - 100,
+    minWidth: width - 100,
+    maxWidth: width - 80,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -44,7 +47,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   contextTxt: {
-    textAlign: 'justify',
+    textAlign: 'center',
   },
   titleTxt: {
     textAlign: 'center',
@@ -71,6 +74,13 @@ const styles = StyleSheet.create({
   },
   subContextTxt: {
     alignSelf: 'center'
+  },
+  loadingContainer: {
+    flex:1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    opacity: 0.2,
+    backgroundColor: 'grey'
   }
 });
 export default styles;

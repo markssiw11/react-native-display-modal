@@ -17,7 +17,7 @@ function Button({ onPress, title, buttonStyle, textStyle }: ButtonProps) {
 
 const styles = StyleSheet.create({
   button: {
-    borderRadius: 20,
+    borderRadius: 8,
     padding: 10,
     elevation: 2,
     backgroundColor: '#09a505',
