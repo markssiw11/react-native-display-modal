@@ -17,7 +17,8 @@ const styles = StyleSheet.create({
   bodyModal: {
     marginVertical: 20,
     backgroundColor: 'white',
-    opacity: 1
+    opacity: 1,
+    maxHeight: height - 140,
   },
   modalView: {
     backgroundColor: defaultCloseTintColor,
@@ -25,7 +26,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     minWidth: width - 100,
     maxWidth: width - 40,
-    maxHeight: height - 50,
+    maxHeight: height - 100,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,

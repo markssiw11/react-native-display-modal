@@ -56,9 +56,9 @@ const RenderModalBody = (props) => {
         <View style={styles.bodyModal}>
           <RenderCloseView {...props} />
           <RenderIconView iconView={iconView} hiddenIconView={hiddenIconView} iconViewTintColor={iconViewTintColor} />
-          <Text style={[styles.titleTxt, { ...titleStyle }]}>{title}</Text>
-          <Text style={[styles.contextTxt, { ...contextStyle }]}>{context}</Text>
-          <Text style={[styles.subContextTxt, { ...subContextStyle }]}>{subContext}</Text>
+          <Text numberOfLines={5} style={[styles.titleTxt, { ...titleStyle }]}>{title}</Text>
+          <Text numberOfLines={20} style={[styles.contextTxt, { ...contextStyle }]}>{context}</Text>
+          <Text numberOfLines={10} style={[styles.subContextTxt, { ...subContextStyle }]}>{subContext}</Text>
         </View>
         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
           {button.map(({ title, buttonStyle, textStyle, onPress }, i) => (
