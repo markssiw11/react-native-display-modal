@@ -1,7 +1,7 @@
 
 import { StyleSheet, Dimensions } from 'react-native'
 import { defaultCloseTintColor } from "./index";
-const { width } = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   modalContainer: {
@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     minWidth: width - 100,
     maxWidth: width - 40,
+    maxHeight: height - 50,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
