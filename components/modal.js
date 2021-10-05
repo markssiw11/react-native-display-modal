@@ -49,6 +49,7 @@ const RenderModalBody = (props) => {
     subContext,
     subContextStyle,
     modalStyle,
+    customView
   } = props;
   return (
     <TouchableWithoutFeedback>
@@ -57,8 +58,9 @@ const RenderModalBody = (props) => {
           <RenderCloseView {...props} />
           <RenderIconView iconView={iconView} hiddenIconView={hiddenIconView} iconViewTintColor={iconViewTintColor} />
           <Text numberOfLines={5} style={[styles.titleTxt, { ...titleStyle }]}>{title}</Text>
-          <Text numberOfLines={20} style={[styles.contextTxt, { ...contextStyle }]}>{context}</Text>
-          <Text numberOfLines={10} style={[styles.subContextTxt, { ...subContextStyle }]}>{subContext}</Text>
+          {context &&<Text numberOfLines={20} style={[styles.contextTxt, { ...contextStyle }]}>{context}</Text>}
+          {subContext && <Text numberOfLines={10} style={[styles.subContextTxt, { ...subContextStyle }]}>{subContext}</Text>}
+          {typeof customView === 'object' && customView}
         </View>
         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
           {button.map(({ title, buttonStyle, textStyle, onPress }, i) => (

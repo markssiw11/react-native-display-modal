@@ -20,7 +20,8 @@ export interface DisplayModalProps {
   hiddenIconView?: boolean,
   closeIconTintColor?: string,
   iconViewTintColor?: string,
-  type: 'loading' | 'actions'
+  type: 'loading' | 'actions',
+  customView?: ReactNode,
 }
 
 type ButtonProps = {
